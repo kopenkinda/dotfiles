@@ -25,6 +25,8 @@ alias ga='git add '
 alias gaa='git add .'
 alias gaaa='git add --all'
 alias gss='git status'
+alias gp='git push'
+alias gpu='git push -u '
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
