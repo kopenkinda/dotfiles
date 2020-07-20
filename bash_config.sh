@@ -6,7 +6,7 @@ DOTFILES_FOLDER="$HOME/.dotfiles"; #dotfiles storage folder
 # --- END ---
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )";
-DOTFILES=$(ls $DIR/files -aI '.' -I '..');
+DOTFILES=$(ls $DIR/bash -aI '.' -I '..');
 
 #Create DOTFILES_FOLDER in ~ if it doesn't already exist.
 mkdir -p $DOTFILES_FOLDER;
@@ -18,6 +18,6 @@ do
     [ -f $dtf ]             && rm $dtf;
     [ -f "$HOME/$dotfile" ] && rm "$HOME/$dotfile";
     [ -L "$HOME/$dotfile" ] && unlink "$HOME/$dotfile";
-    cp "$DIR/files/$dotfile" "$dtf";
+    cp "$DIR/bash/$dotfile" "$dtf";
     ln -s "$dtf" "$HOME/$dotfile";
 done
